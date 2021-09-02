@@ -1,0 +1,193 @@
+:root {
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  padding: 5rem 0;
+  margin: 0;
+  background-color: var(--paleBlue);
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: center top;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--veryPaleBlue);
+  max-width: 28.75rem;
+  width: 100%;
+
+  position: relative;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 15px 20px -5px rgba(83, 51, 237, 0.3);
+  overflow: hidden;
+}
+
+.hero {
+  width: 100%;
+  max-height: 13.75rem;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.content {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2.85rem 1.5rem 2.85rem;
+  font-weight: 700;
+  text-align: center;
+  height: 70%;
+}
+
+.content h1 {
+  color: var(--darkBlue);
+  font-size: 1.1875rem;
+  margin-bottom: 0;
+}
+
+.content p {
+  color: var(--desaturatedBlue);
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  width: 80%;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.content__sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--veryPaleBlue);
+  height: 5.25rem;
+  width: calc(100% - 1rem);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.content__sub .plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content__sub .plan .price {
+  margin-left: 0.75rem;
+}
+
+.content__sub .plan .price h4 {
+  color: var(--darkBlue);
+}
+
+.content__sub .plan .price p {
+  margin-top: -0.875rem;
+  color: var(--darkBlue);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.content__sub .change {
+  color: var(--brightBlue);
+}
+
+.content__sub .change:hover {
+  color: var(--desaturatedBlue);
+  text-decoration: none;
+}
+
+.content button {
+  margin-bottom: 1rem;
+  background-color: var(--brightBlue);
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.85rem;
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  box-shadow: 1px 15px 15px rgba(83, 51, 237, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+.content button:hover {
+  background-color: var(--desaturatedBlue);
+}
+
+.content .cancel {
+  display: block;
+  color: var(--desaturatedBlue);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.content .cancel:hover {
+  color: var(--darkBlue);
+}
+
+@media (max-width: 25rem) {
+  body {
+    padding: 2rem 1rem;
+    background-image: url("./images/pattern-background-mobile.svg");
+  }
+
+  .content {
+    padding: 0 1rem 1.5rem 1rem;
+  }
+
+  .content p {
+    width: 90%;
+  }
+
+  .content__sub .plan .music-icon img {
+    width: 2rem;
+  }
+
+  .content__sub .plan .price h4 {
+    font-size: 0.875rem;
+  }
+  .content__sub .plan .price p {
+    font-size: 0.75rem;
+  }
+
+  .content__sub .change {
+    font-size: 0.875rem;
+  }
+
+  .content button {
+    font-size: 0.875rem;
+  }
+}
